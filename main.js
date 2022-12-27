@@ -1,7 +1,21 @@
-const days = document.querySelector('#days')
-const hour = document.querySelector('#hour')
-const minutes = document.querySelector('#minutes')
-const seconds = document.querySelector('#seconds')
+const proximoAno = new Date().getFullYear() + 1
+const dataInicial = new Date(`January 01 ${proximoAno} 00:00:00`)
+
+const atualizAno = () => {
+    const anoAtual = new Date()
+    const diferencaAno = dataInicial - anoAtual
+    const days = Math.floor(diferencaAno / 1000)
+
+    console.log(diferencaAno)
+}
+
+atualizAno()
+
+// const days = document.querySelector('#days')
+// const hour = document.querySelector('#hour')
+// const minutes = document.querySelector('#minutes')
+// const seconds = document.querySelector('#seconds')
+
 
 
 
