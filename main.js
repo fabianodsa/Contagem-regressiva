@@ -16,8 +16,8 @@ const atualizAno = () => {
 
     secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds
     daysContainer.textContent = days < 10 ? '0' + days : days
-    secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds
-    secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds
+    hourContainer.textContent = hours < 10 ? '0' + hours : hours
+    minutesContainer.textContent = minutes < 10 ? '0' + minutes : minutes
 }
 
 setInterval(atualizAno, 1000)
