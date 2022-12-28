@@ -1,20 +1,29 @@
+const secondsContainer = document.querySelector('#seconds')
+
+// const days = document.querySelector('#days')
+// const hour = document.querySelector('#hour')
+// const minutes = document.querySelector('#minutes')
+
+
+
+
 const proximoAno = new Date().getFullYear() + 1
 const dataInicial = new Date(`January 01 ${proximoAno} 00:00:00`)
 
 const atualizAno = () => {
     const anoAtual = new Date()
     const diferencaAno = dataInicial - anoAtual
-    const days = Math.floor(diferencaAno / 1000)
+    const days = Math.floor(diferencaAno / 1000 / 60 / 60 / 24)
+    const hours = Math.floor(diferencaAno / 1000 / 60 / 60) % 24
+    const minutes = Math.floor(diferencaAno / 1000 / 60) % 60
+    const seconds = Math.floor(diferencaAno / 1000) % 60
 
-    console.log(diferencaAno)
+    secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds
 }
 
-atualizAno()
+setInterval(atualizAno, 1000)
 
-// const days = document.querySelector('#days')
-// const hour = document.querySelector('#hour')
-// const minutes = document.querySelector('#minutes')
-// const seconds = document.querySelector('#seconds')
+
 
 
 
