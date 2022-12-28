@@ -45,7 +45,7 @@ h1 {
   }
   
   .container {
-    display: flex;
+    display: none;
     transform: scale(2);
   }
   
